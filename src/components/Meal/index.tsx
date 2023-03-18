@@ -22,13 +22,14 @@ const Meal = () => {
     );
 
   const meal: IMeal | undefined = response.meals && response.meals[0];
+  const imageSrc = meal?.strMealThumb ? meal.strMealThumb : "";
   const sourceHref = meal?.strSource ? meal.strSource : "";
   const youtubeHref = meal?.strYoutube ? meal.strYoutube : "/";
 
   return (
     <div className="mx-auto flex min-h-screen w-[90%] flex-wrap items-start justify-center gap-8 px-3 pl-16 pt-6">
       <div className="flex w-[20rem] flex-col">
-        <img src={meal?.strMealThumb} alt={meal?.strMeal} className="rounded" />
+        <img src={imageSrc} alt={meal?.strMeal} className="rounded" />
         <h1 className="text-[2rem] font-medium">{meal?.strMeal}</h1>
       </div>
       <div className="flex w-[40rem] flex-col gap-1">
