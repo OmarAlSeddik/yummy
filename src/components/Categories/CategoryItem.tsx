@@ -1,5 +1,6 @@
-import type ICategory from "./ICategory";
+import Link from "next/link";
 import { useState } from "react";
+import type ICategory from "./ICategory";
 
 const CategoryItem = ({
   strCategory,
@@ -7,14 +8,15 @@ const CategoryItem = ({
   strCategoryThumb,
 }: ICategory) => {
   const [isHoveredOver, setIsHoveredOver] = useState(false);
-
   const dynamicStyle = isHoveredOver ? "top-0" : "top-[100%]";
+  const query = `/filtered-meals/c=${strCategory}`;
 
   return (
-    <div
+    <Link
       className="relative flex w-[20rem] cursor-pointer items-center justify-center overflow-hidden rounded"
       onMouseOver={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
+      href={query}
     >
       <img src={strCategoryThumb} alt={strCategoryDescription} />
       <div
@@ -23,7 +25,7 @@ const CategoryItem = ({
         <h2 className="text-[2rem]">{strCategory}</h2>
         <p>{strCategoryDescription.split(" ").slice(0, 20).join(" ")}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -16,10 +16,8 @@ export default function Document() {
         name="viewport"
         content="width=device-width, height=device-height, initial-scale=1"
       />
-      {/* Google Font Here */}
       <link rel="icon" href="favicon.ico" />
-      {/* Add the app-wide default classes to the body's className. */}
-      <body className="">
+      <body>
         <Main />
         <NextScript />
       </body>

@@ -1,6 +1,6 @@
 const Search = () => {
   const inputStyle =
-    "w-[15rem] bg-yummy-black rounded border-white border-[1px] focus:shadow-blue-500 py-1.5 px-3";
+    "w-[15rem] bg-yummy-black rounded border-white border-[1px] py-1.5 px-3";
 
   return (
     <div className="ml-16 flex w-full flex-col items-center pt-6">
