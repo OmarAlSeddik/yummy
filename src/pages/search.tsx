@@ -1,7 +1,8 @@
+import Search from "@/components/Search";
 import { type NextPage } from "next";
 
 const SearchPage: NextPage = () => {
-  return <div />;
+  return <Search />;
 };
 
 export default SearchPage;

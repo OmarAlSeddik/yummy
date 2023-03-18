@@ -17,9 +17,9 @@ const Nav = () => {
 
   return (
     <nav
-      className={`absolute flex h-full transition-all duration-500 ${divDynamic}`}
+      className={`fixed z-10 flex h-full transition-all duration-500 ${divDynamic}`}
     >
-      <div className="flex w-[16rem] flex-col justify-between p-6">
+      <div className="flex h-full w-[16rem] flex-col justify-between bg-yummy-black p-6">
         <ul className="flex flex-col gap-4 pt-2">
           <li>
             <Link
