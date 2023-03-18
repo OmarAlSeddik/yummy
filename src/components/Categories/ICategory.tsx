@@ -5,4 +5,8 @@ interface ICategory {
   strCategoryThumb: string;
 }
 
+export interface IResponse {
+  categories: ICategory[];
+}
+
 export default ICategory;

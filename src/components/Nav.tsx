@@ -39,7 +39,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              href="/area"
+              href="/areas"
               className={`relative transition-all delay-[600ms] ${linksDynamic}`}
             >
               Area

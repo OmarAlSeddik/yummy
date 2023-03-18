@@ -1,8 +1,7 @@
+import type ICategory from "./ICategory";
 import { useState } from "react";
-import type ICategory from "src/types/ICategory";
 
 const CategoryItem = ({
-  idCategory,
   strCategory,
   strCategoryDescription,
   strCategoryThumb,
@@ -13,8 +12,7 @@ const CategoryItem = ({
 
   return (
     <div
-      key={idCategory}
-      className="relative w-[20rem] cursor-pointer overflow-hidden rounded"
+      className="relative flex w-[20rem] cursor-pointer items-center justify-center overflow-hidden rounded"
       onMouseOver={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
     >

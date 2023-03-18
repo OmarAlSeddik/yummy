@@ -1,10 +1,7 @@
+import type ICategory from "./ICategory";
+import { type IResponse } from "./ICategory";
 import useFetch from "@/hooks/useFetch";
-import type ICategory from "src/types/ICategory";
 import CategoryItem from "./CategoryItem";
-
-interface IResponse {
-  categories: ICategory[];
-}
 
 const Categories = () => {
   const [response, loading] = useFetch<IResponse>(
@@ -22,7 +19,7 @@ const Categories = () => {
   const categories: ICategory[] = response.categories;
 
   const items = (
-    <div className="mx-auto flex h-full w-full flex-wrap justify-center gap-8 px-3 pl-16 pt-6">
+    <div className="mx-auto grid h-full w-[90%] grid-cols-1 items-center gap-4 px-3 pl-16 pt-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
       {categories.map((category) => (
         <CategoryItem
           idCategory={category.idCategory}
