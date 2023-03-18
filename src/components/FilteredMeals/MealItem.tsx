@@ -1,16 +1,18 @@
+import Link from "next/link";
 import { useState } from "react";
 import type IMeal from "./IMeal";
 
-const MealItem = ({ strMeal, strMealThumb }: IMeal) => {
+const MealItem = ({ strMeal, strMealThumb, idMeal }: IMeal) => {
   const [isHoveredOver, setIsHoveredOver] = useState(false);
-
   const dynamicStyle = isHoveredOver ? "top-0" : "top-[100%]";
+  const url = `/meal/${idMeal}`;
 
   return (
-    <div
+    <Link
       className="relative flex w-[20rem] cursor-pointer items-center justify-center overflow-hidden rounded"
       onMouseOver={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
+      href={url}
     >
       <img src={strMealThumb} alt={strMeal} />
       <div
@@ -18,7 +20,7 @@ const MealItem = ({ strMeal, strMealThumb }: IMeal) => {
       >
         <h2 className="text-[2rem]">{strMeal}</h2>
       </div>
-    </div>
+    </Link>
   );
 };
 

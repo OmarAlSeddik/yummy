@@ -7,7 +7,6 @@ import MealItem from "./MealItem";
 const FilteredMeals = () => {
   const router = useRouter();
   const apiQuery = router.query.apiQuery;
-  console.log(apiQuery);
 
   const [response, loading] = useFetch<IResponse>(
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
